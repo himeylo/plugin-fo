@@ -1,0 +1,50 @@
+{
+  "name": "plugin-fo",
+  "version": "1.0.0",
+  "description": "A Wordpress plugin gets and displays API data content.",
+  "author": "Jamie McKinnerney <jamie.mckinnerney@gmail.com>",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin"
+  ],
+  "homepage": "https://github.com/himeylo/plugin-fo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himeylo/plugin-fo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/himeylo/plugin-fo/issues"
+  },
+  "engines": {
+    "node": ">=18.16.1 <20.0.0",
+    "npm": ">=9.5.1"
+  },
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {
+    "@wordpress/env": "^8.2.0",
+    "@wordpress/scripts": "26.8.0",
+    "sass": "^1.69.5"
+  },
+  "scripts": {
+    "start": "wp-env start --scripts && npm run build:dev && npm run watch",
+    "start:debug": "wp-env start --scripts --xdebug=profile,trace,debug",
+    "start:update": "wp-env start --scripts --update",
+    "stop": "wp-env stop",
+    "clean": "wp-env clean all && wp-env start --scripts",
+    "destroy": "wp-env destroy",
+    "build": "sass src/assets/css:src/assets/css --no-source-map --style=compressed",
+    "build:dev": "sass src/assets/css:src/assets/css",
+    "watch": "npm run watch:css",
+    "watch:css": "sass src/assets/css --watch",
+    "logs": "wp-env logs",
+    "wp": "wp-env run cli wp",
+    "db:query": "wp-env run cli wp db query",
+    "db:seed-php": "wp-env run cli wp eval-file database.php",
+    "db:seed-sql": "wp-env run cli wp db import database.sql",
+    "composer": "wp-env run --env-cwd=wp-content/plugins/plugin-fo wordpress composer",
+    "wp-env": "wp-env",
+    "wp-scripts": "wp-scripts"
+  }
+}
