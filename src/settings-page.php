@@ -18,6 +18,19 @@ add_action(
 			'manage_options',
 			'plugin-fo',
 			function () {
+				// check if the user have submitted the settings
+				// WordPress will add the "settings-updated" $_GET parameter to the url
+				if (isset($_GET['settings-updated'])) {
+					// add settings saved message with the class of "updated"
+					$home = get_home_url();
+					$home_link = '<a href="' . $home . '">demo</a>';
+					add_settings_error('plugin_fo_messages', 'plugin_fo_message', 'Return to the ' . $home_link, 'updated');
+					var_dump(get_option('plugin-fo-settings'));
+				}
+
+				// show error/update messages
+				settings_errors('plugin_fo_messages');
+
 ?>
 		<div class="wrap">
 			<h1><?php esc_html_e('Plugin FO Settings', 'plugin-fo-textdomain'); ?></h1>
@@ -52,6 +65,7 @@ add_action(
 			'Plugin FO Settings',
 			function () {
 				esc_html_e('Enter an API endpoint below.', 'plugin-fo-textdomain');
+				echo ' Try <a href="https://any-api.com/">Any API</a>.';
 			},
 			'plugin-fo-settings'
 		);

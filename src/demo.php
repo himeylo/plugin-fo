@@ -55,28 +55,13 @@ function create_plugin_demo_page(): int {
 		return $query->posts[0];
 	}
 
-	$links_html = '';
-	$content_links = get_posts();
-	if (!empty($content_links)) {
-		foreach ($content_links as $key => $link) {
-			$links_html .= "<!-- wp:list-item -->\n<li><a href=\"{$link}\">{$key}</a></li>\n<!-- /wp:list-item -->";
-		}
-	}
-
 	$demo_page = array(
 		'post_title'   => $demo_page_title,
 		'post_type'    => 'page',
 		'post_author'  => 1,
 		'post_status'  => 'publish',
 		'post_content' => '<!-- wp:paragraph -->
-<p><code>This post provides a custom post type named "New Post Type".</code> Not sure if CPT is needed yet.</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>' . $links_html . '
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>It also provides a shortcode named "my-shortcode". The output is shown below:</p>
+<p>This plugin provides a shortcode named "fo-shortcode". The output is shown below:</p>
 <!-- /wp:paragraph -->
 <!-- wp:shortcode -->
 [fo-shortcode]

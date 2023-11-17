@@ -40,4 +40,3 @@ require 'src/assets.php';
 require 'src/demo.php';
 require 'src/settings-page.php';
 require 'src/shortcodes.php';
-require 'src/admin/ajax-request.php';
