@@ -25,7 +25,6 @@ add_action(
 					$home = get_home_url();
 					$home_link = '<a href="' . $home . '">demo</a>';
 					add_settings_error('plugin_fo_messages', 'plugin_fo_message', 'Return to the ' . $home_link, 'updated');
-					var_dump(get_option('plugin-fo-settings'));
 				}
 
 				// show error/update messages
@@ -75,7 +74,7 @@ add_action(
 			function () {
 				$options = get_option('plugin-fo-settings');
 	?>
-		<input type="text" name="plugin-fo-settings[api_endpoint]" value="<?php echo esc_attr($options['api_endpoint'] ?? ''); ?>" />
+		<input type="text" name="plugin-fo-settings[api_endpoint]" value="<?php echo esc_attr($options['api_endpoint']) ?: 'https://api.sampleapis.com/coffee/hot'; ?>" />
 <?php
 			},
 			'plugin-fo-settings',
