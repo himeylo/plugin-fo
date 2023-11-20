@@ -55,7 +55,7 @@ wp_enqueue_style(
 				break;
 			}
 			if (!empty($result->title)) {
-				$pubDate = strtotime($result->published_date) < strtotime('-1 day') ? date("g:i a", strtotime($result->published_date)) : date("M j, Y", strtotime($result->published_date));
+				$pubDate = strtotime($result->published_date) < strtotime('-1 day') ? date("g:i a", strtotime($result->published_date)) : date("M j", strtotime($result->published_date));
 				$media = $result->multimedia ? $result->multimedia[0]->url : '';
 
 				echo '<div class="nytimes-top-story">';

@@ -74,7 +74,7 @@ add_action(
 			function () {
 				$options = get_option('plugin-fo-settings');
 	?>
-		<input type="text" name="plugin-fo-settings[api_endpoint]" value="<?php echo esc_attr($options['api_endpoint']) ?: 'https://api.sampleapis.com/coffee/hot'; ?>" />
+		<input type="text" name="plugin-fo-settings[api_endpoint]" value="<?php echo esc_attr($options['api_endpoint']) ?: 'https://api.nytimes.com/svc/topstories/v2/science.json?api-key=Jmtqcf6d1A2SbjYGQRzkxeC6MmS0tIXj'; ?>" />
 <?php
 			},
 			'plugin-fo-settings',
