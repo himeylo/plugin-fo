@@ -1,12 +1,16 @@
 # WordPress Plugin
 
-This plugin gets data from any API that is set in the plugin settings. Display API data content with a shortcode.
+This plugin gets data from any API that is set in the plugin settings. The shortcode, `[fo-shortcode]` displays a content view from the top 4 returned API data results set, followed by a raw data dump for ease of reference.
+
+Follow the guidance in Developer Installation to set up and run your local environment. The sections that follow contain additional information for your reference.
 
 ## Developer Installation
 
-### Docker
+These instructions provide 2 options for running your local environment. You only need to use one option.
 
-Run the commands below and then open your browser to [http://localhost:8888](http://localhost:8888). Your username and password are `admin -> password`.
+### Option 1. Docker
+
+Run the commands below and then open your browser to [http://localhost:8888](http://localhost:8888).
 
 ```shell
 git clone https://github.com/himeylo/plugin-fo
@@ -14,8 +18,9 @@ cd plugin-fo
 npm install
 npm start
 ```
+Running `npm start` will start up your local environment and, also, begin watching for changes to styles/scripts.
 
-### Local
+### Option 2. Local
 
 ```shell
 cd ~/Local Sites/your-site/app/public/wp-content/plugins
@@ -24,6 +29,15 @@ cd plugin-fo
 npm install
 composer install
 ```
+
+### Login Credentials
+When prompted, use the following to log in to the WordPress dashboard:
+```
+admin
+password
+```
+
+
 
 ## Directory Structure
 
@@ -34,9 +48,9 @@ This plugin uses a specific directory structure which separates concerns between
 3. **.vscode** - Visual Studio Code integration files.
 4. **.wp-env** - WordPress development environment default content.
 5. **src** - Source code for the plugin.
-   a. Common WordPress feature implementations that you can copy and modify for your plugin.
-   b. **assets** - JavaScript, CSS, images, fonts, and other static files.
-   c. **views** - File content output to the browser by the plugin. This is where you should put most or all of the HTML output from your plugin, to make that content easier to find and change.
+   - Common WordPress feature implementations that you can copy and modify for your plugin.
+   - **assets** - JavaScript, CSS, images, fonts, and other static files.
+   - **views** - File content output to the browser by the plugin. This is where you should put most or all of the HTML output from your plugin, to make that content easier to find and change.
 6. **index.php** - The entrypoint for the plugin's source code, which is loaded by WordPress if the plugin is activated for a site.
 
 ## Commands

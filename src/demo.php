@@ -40,7 +40,7 @@ function create_demo_content(): void {
  * @return int The ID of the demo post.
  */
 function create_plugin_demo_page(): int {
-	$demo_page_title = 'Hello Forum One!';
+	$demo_page_title = 'Hello, Forum One!';
 	$query           = new \WP_Query(
 		array(
 			'title'          => $demo_page_title,

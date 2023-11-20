@@ -1,126 +1,124 @@
 /**
  * Styles for the shortcode content.
  */
-#fo-shortcode .fo-shortcode-counter {
-  font: 700 1.2em monospace;
-  text-decoration: underline;
-}
-
-.home pre {
+#fo-shortcode pre {
+  color: purple;
   overflow-x: scroll;
 }
-
-.nytimes-top-stories {
+#fo-shortcode h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+#fo-shortcode .nytimes-top-stories {
   display: grid;
   gap: 1em;
   margin-block: 3em;
 }
 @media (min-width: 768px) {
-  .nytimes-top-stories {
+  #fo-shortcode .nytimes-top-stories {
     grid-template-areas: "spotlight story1" "spotlight story2" "spotlight story3";
   }
 }
-.nytimes-top-stories a {
+#fo-shortcode .nytimes-top-stories a {
   text-decoration: none;
 }
-.nytimes-top-stories a:hover {
+#fo-shortcode .nytimes-top-stories a:hover {
   text-decoration: underline;
 }
-
-.nytimes-top-story {
+#fo-shortcode .nytimes-top-story {
   display: grid;
   grid-template-rows: 1fr 2fr;
   padding-right: 0.5em;
 }
 @media (min-width: 376px) {
-  .nytimes-top-story {
+  #fo-shortcode .nytimes-top-story {
     gap: 0.85em;
     grid-template-columns: 1fr 1.25fr;
     grid-template-rows: auto;
   }
 }
 @media (min-width: 768px) {
-  .nytimes-top-story {
+  #fo-shortcode .nytimes-top-story {
     grid-template-columns: 1fr 1fr;
   }
 }
-.nytimes-top-story h3 {
+#fo-shortcode .nytimes-top-story h3 {
   margin-block: 1em 0.5em;
 }
-.nytimes-top-story p {
+#fo-shortcode .nytimes-top-story p {
   color: #000;
   font-family: "Cardo", serif;
   font-size: 0.9em;
 }
-.nytimes-top-story span {
+#fo-shortcode .nytimes-top-story span {
   font-size: 9px;
   letter-spacing: 0.15em;
   padding: 0.5em 1em;
   text-transform: uppercase;
 }
-.nytimes-top-story span.nytimes-top-story__byline {
+#fo-shortcode .nytimes-top-story span.nytimes-top-story__byline {
   background-color: rgba(255, 255, 255, 0.95);
   color: #444;
 }
-.nytimes-top-story span.nytimes-top-story__section {
+#fo-shortcode .nytimes-top-story span.nytimes-top-story__section {
   background-color: #222;
   color: #fff;
 }
-.nytimes-top-story .nytimes-top-story__image {
+#fo-shortcode .nytimes-top-story .nytimes-top-story__image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-width: 768px) {
-  .nytimes-top-story:first-child {
+  #fo-shortcode .nytimes-top-story:first-child {
     grid-area: spotlight;
   }
-  .nytimes-top-story:first-child h3 {
+  #fo-shortcode .nytimes-top-story:first-child h3 {
     font-size: 22px;
   }
 }
 @media (min-width: 768px) {
-  .nytimes-top-story:nth-child(2) {
+  #fo-shortcode .nytimes-top-story:nth-child(2) {
     grid-area: story1;
   }
-  .nytimes-top-story:nth-child(2) .nytimes-top-story__text {
+  #fo-shortcode .nytimes-top-story:nth-child(2) .nytimes-top-story__text {
     margin-block: 0.25em;
   }
-  .nytimes-top-story:nth-child(2) h3 {
+  #fo-shortcode .nytimes-top-story:nth-child(2) h3 {
     font-size: 1.1em;
     margin: 0;
   }
-  .nytimes-top-story:nth-child(2) p {
+  #fo-shortcode .nytimes-top-story:nth-child(2) p {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .nytimes-top-story:nth-child(3) {
+  #fo-shortcode .nytimes-top-story:nth-child(3) {
     grid-area: story2;
   }
-  .nytimes-top-story:nth-child(3) .nytimes-top-story__text {
+  #fo-shortcode .nytimes-top-story:nth-child(3) .nytimes-top-story__text {
     margin-block: 0.25em;
   }
-  .nytimes-top-story:nth-child(3) h3 {
+  #fo-shortcode .nytimes-top-story:nth-child(3) h3 {
     font-size: 1.1em;
     margin: 0;
   }
-  .nytimes-top-story:nth-child(3) p {
+  #fo-shortcode .nytimes-top-story:nth-child(3) p {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .nytimes-top-story:nth-child(4) {
+  #fo-shortcode .nytimes-top-story:nth-child(4) {
     grid-area: story3;
   }
-  .nytimes-top-story:nth-child(4) .nytimes-top-story__text {
+  #fo-shortcode .nytimes-top-story:nth-child(4) .nytimes-top-story__text {
     margin-block: 0.25em;
   }
-  .nytimes-top-story:nth-child(4) h3 {
+  #fo-shortcode .nytimes-top-story:nth-child(4) h3 {
     font-size: 1.1em;
     margin: 0;
   }
-  .nytimes-top-story:nth-child(4) p {
+  #fo-shortcode .nytimes-top-story:nth-child(4) p {
     display: none;
   }
 }

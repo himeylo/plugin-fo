@@ -20,8 +20,7 @@ wp_enqueue_style(
 	filemtime(PLUGIN_SRC_DIR . 'assets/css/fo-shortcode.css')
 );
 
-?><div id="<?= esc_attr($props->id) ?>" </div>
-	<p>Would you like to see some API data?</p>
+?><div id="<?= esc_attr($props->id) ?>">
 	<?php
 
 	$options = get_option('plugin-fo-settings');
@@ -48,7 +47,7 @@ wp_enqueue_style(
 
 	if (!empty($data)) {
 		$count = 0;
-		echo '<p>Here are the top stories from the New York Times:</p>';
+		echo '<h2>Here are the top stories from the New York Times:</h2>';
 		echo '<div class="nytimes-top-stories" id="TopStories">';
 		foreach ($data->results as $result) {
 			if ($count >= 4) {
@@ -84,6 +83,7 @@ wp_enqueue_style(
 	}
 
 	?>
+	<h2>Would you like to see the API data?</h2>
 	<p><?= esc_html($message) ?></p>
 	<pre>Content: <?= $content ?></pre>
 	<?php
